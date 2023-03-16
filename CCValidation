@@ -1,0 +1,71 @@
+/*Hannah Alldredge
+ * COSC 1337 001
+ * 09/23/2020
+ * Purpose: To issue a PIN and verify credit card number is valid (Program 2) 
+ */
+
+package creditCard;
+
+import java.util.Scanner;
+
+import java.util.Random;
+
+public class Program2CCValidation {
+
+	public static void main(String[] args) {
+		//set up Scanner 
+		Scanner scanner = new Scanner(System.in);
+		//set up a boolean named validCreditCard and set it to false
+		boolean validCreditCard = false;
+		//loop while not a valid credit card
+		while(validCreditCard = false)
+			System.out.print("Enter 16-Digit Credit Card Number: ");
+		//get the credit card number as a String - store in potentialCCN (use scanner's nextLine)
+		String potentialCCN = scanner.nextLine();
+		//use Luhn to validate credit card using following steps: 
+		//store the digit AS AN INT for later use in lastDigit
+		int lastDigit = charAt(15);
+		//remove the last digit from potentialCCN and store in potentialCCN using String's substring
+		potentialCCN = (potentialCNN.substring(0,(potentialCNN.length()-1));
+		//reverse the digits using a for loop
+		//create reversedCCN as an empty String
+		String reversedCCN = new String();
+		for (potentialCCN > 0) {
+			reversedCNN = reversedCNN * 10 + potentialCNN % 10;
+			(potentialCNN) / 10;
+			return reversedCNN;
+		}
+		//set boolean isOddDigit to false
+		boolean isOddDigit = false;
+		//set up an integer called current digit and set it to 0
+		int currentDigit = 0;
+		//create an integer named sum and set it to 0 
+		int sum = 0;
+		//multiply the digits in odd positions by 2, then subtract 9 from any number higher than 9 using: 
+		//(for loop running 0 to less than length of reversed CCN)
+		for (int sum = 0;sum<reversedCNN.length;sum++) {
+			if(reversedCNN[sum]%2==0) {
+				//multiply currentDigit by 2 and store in currentDigit
+				currentDigit *= 2; 
+			}
+			//if currentDigit > 9, subtract 9 from currentDigit and store in currentDigit
+			if (currentDigit > 9) {
+				currentDigit -= 9;
+			}
+
+		}
+		// add currentDigit to sum and store in sum     
+		sum += currentDigit;
+	}
+
+	//if the last digit of sum + the last Digit ends in a zero, set isValidCreditCard to true
+	if (lastDigit = 0) {
+		isValidCreditCard = true;
+		//issue a RANDOM PIN and print it out
+		Random rand = new Random();
+		int randomPIN = rand.nextInt((9999-100)+1)+10;
+		System.out.println(randomPIN);
+		//if validCreditCard is false, output an appropriate message
+	} else 
+		System.out.println("Credit Card Validation Failed");
+}
